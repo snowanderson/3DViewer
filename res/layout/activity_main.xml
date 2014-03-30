@@ -12,15 +12,15 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Debug area" />
+        android:text="" />
 
-    <TextView
-        android:id="@+id/textView1"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="158dp"
-        android:text="Texte à venir" />
+        android:layout_marginTop="335dp"
+        android:text="Visualiser" />
 
 </RelativeLayout>
