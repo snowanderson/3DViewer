@@ -144,13 +144,11 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
-		TextView myTextView = (TextView) findViewById(R.id.textView1);
 		TextView debug = (TextView) findViewById(R.id.textView2);
 		File filesDir = getFilesDir();
 		String[] a = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).list();
 		String b = a.toString();
 		String filedir=filesDir.toString();
-		myTextView.setText(b);
 
 		try { 
 		       // catches IOException below
@@ -184,7 +182,12 @@ public class MainActivity extends Activity {
 		
 				// télécharger le fichier
 			    new DownloadFileFromURL().execute(file_url);
-		              		        
+			    try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				// décompresser le fichier
 				if(g.isFile()) {
 
